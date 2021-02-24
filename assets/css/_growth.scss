@@ -1,0 +1,34 @@
+.key-indecator__section {
+  height: 80vh;
+  width: 100%;
+  padding: 8rem 0rem 4rem 0rem;
+  margin-bottom: 2rem;
+  // border-bottom: 1px solid rgba(167, 167, 167, 0.71);
+  @include key-generator-Bg;
+
+  .wrapper {
+    
+    h1 {
+      @include x-lg__text;
+      font-size: 35px;
+      text-align: center;
+      line-height: 43px;
+    }
+
+    .key-indecator {
+      height: 100%;
+      width: 100%;
+      padding: 4rem 0rem;
+
+      h3 {
+        @include x-lg__text;
+        font-size: 30px;
+        line-height: 43px;
+      }
+
+      p {
+        color: #c13354
+      }
+    }
+  }
+}

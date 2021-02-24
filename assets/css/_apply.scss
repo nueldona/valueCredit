@@ -1,0 +1,119 @@
+.Apply__section {
+  width: 100%;
+  height: 48em;
+  box-shadow: -1px 0px 30px 0px rgba(226, 226, 226, 0.78);
+  @include apply-section-img;
+  .wrapper {
+    .Apply__section-info {
+      padding-top: 3.5rem;
+
+      h1 {
+        @include x-lg__text;
+        font-size: 35px;
+        text-align: center;
+        line-height: 43px;
+        margin-bottom: 4rem;
+      }
+
+      .big__btn {
+        @include bigButton;
+        margin: 2rem auto 0rem auto;
+      }
+      .info {
+        position: relative;
+
+        .line {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 6rem;
+          background: #6b6b6b;
+          top: 11%;
+          left: 5%;
+          &:nth-child(2) {
+            top: 47%;
+            left: 5%;
+          }
+        }
+
+        .info__section-one {
+          margin-bottom: 2rem;
+  
+          &:hover {
+            .number__box {
+              transform: scale(1.2);
+              @include easeIn
+            }
+          }
+          .number__box {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            // border: 1px solid #b9b9b9;
+            box-shadow: 0px 1px 12px 0px rgba(167, 167, 167, 0.71);
+            text-align: center;
+            @include md__text;
+            font-weight: 600;
+            line-height: 45px;
+            margin-right: 20px;
+          }
+  
+          h2 {
+            @include lg__text;
+            font-weight: 600;
+            line-height: 35px;
+          }
+  
+          .paragraph {
+            margin: 0.5rem 0rem 0rem 3.5rem;
+            @include sm__text;
+            font-weight: 500;
+            line-height: 30px;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+@include altMd {
+  .info {
+    .line {
+      top: 12% !important;
+      left: 3% !important;
+      &:nth-child(2) {
+        top: 48% !important;
+        left: 3% !important;
+      }
+    }
+  }  
+}
+
+@include mediaMd {
+  .info {
+    .line {
+      left: 4% !important;
+      &:nth-child(2) {
+        left: 4% !important;
+      }
+    }
+  }  
+}
+
+@media screen and (max-width: 1024px ) {
+  .Apply__section-image {
+    display: none;
+  }
+}
+
+@include mediaXl {
+  .info {
+    .line {
+      left: 3.5% !important;
+      &:nth-child(2) {
+        left: 3.5% !important;
+      }
+    }
+  }  
+}
