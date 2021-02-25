@@ -5,7 +5,7 @@ footer {
   padding: 4rem 6rem 1.5rem 6rem;
   border-top: 1px solid #ddd;
   .left {
-    width: 50%;
+    width: 100%;
     height: 100%;
     .mobile-navigations__address,
     .mobile-navigations__contact {
@@ -46,7 +46,7 @@ footer {
   }
 
   .right {
-    width: 35%;
+    width: 70%;
     height: 100%;
     padding: 2rem;
     background: #000000;
@@ -84,6 +84,17 @@ footer {
       @include sm__text;
       font-weight: 500;
       font-size: 14px;
+    }
+  }
+}
+
+
+@include mediaXm {
+  footer {
+    padding: 4.5rem 2.5rem 0rem 2.5rem;
+    .right {
+      width: 100%;
+      padding: 1.5rem 2rem 1.5rem 2rem;
     }
   }
 }

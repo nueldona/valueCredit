@@ -17,6 +17,13 @@
   <!-- tailwind -->
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+
+
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
@@ -152,7 +159,7 @@
   </section>
   
   <main class="hero">
-    <section class="wrapper container mx-auto px-10 sm:px-10 md:grid gap-2 grid-cols-2">
+    <section class="wrapper mx-auto md:grid gap-2 grid-cols-2">
       <section class="hero__info">
         <h1>
           Easily access
@@ -161,7 +168,7 @@
         <p class="mt-10">
           We are the financial solutions partner for Micro and Small Businesses. We constantly apply innovative ways to simplify and speed up access to credit. We will provide investment opportunities with safe and rewarding investments.
         </p>
-        <div class="mt-10">
+        <div class="mt-16">
           <a href="#" class="items__btn">
             Get Started
             <i class="fas fa-long-arrow-alt-right"></i>
@@ -169,21 +176,17 @@
         </div>
         
       </section>
-      <section class="hero__loan-cal">
-        <section class="background__circle">
-          <center>
-            <div class="css-shapes-preview"></div>
-            <div class="css-shapes-preview-2"></div>
-          </center>
+      <section>
+        <section class="hero__img">
+          <img src="assets/image/heroimage.PNG" alt="">
         </section>
+      </section>
     </section>
   </main>
 
+  <!-- APPLY FOR A LOAN -->
   <section class="Apply__section">
     <section class="wrapper container mx-auto px-10 sm:px-10 lg:grid gap-20 grid-cols-2">
-      <section class="Apply__section-image">
-        <img src="./assets/image/smile.jpg" alt="">
-      </section>
       <section class="Apply__section-info">
         <h1>3 Quick Steps Apply &amp; Access Loan</h1>
         <section class="info">
@@ -228,93 +231,160 @@
           Get Started Now
         </a>
       </section>
+      <section class="Apply__loan-cal">
+        <div class="loan-cal">
+          <h1 class="loan__cal-head my-5 text-center">Calculate Tour Rate</h1>
+          <section class="form">
+            <div class="form-group__head">
+              <h3>Borrowed Amount</h3>
+              <p id="sliderValue"><span>&#8358;</span> 100,000</p>
+            </div>
+            <div class="range-slider flex">
+              <input type="range" value="100" min="100" max="999" range="true"
+                step="1" id="firstRange">
+                <div class="sliderValue amount__range">
+                  <span>100</span>
+                </div>
+            </div>
+          </section>
+          
+          <section class="form">
+            <div class="form-group__head mt-8">
+              <h3>Repayment Period</h3>
+              <p id="sliderValueN">2 days</p>
+            </div>
+            <div class="range-slider flex">
+              <input type="range" value="1" min="2" max="90" range="true"
+                step="1" id="secondRange">
+              <div class="sliderValue days__range">
+                <span>2</span>
+              </div>  
+            </div>
+          </section>
+          <section class="form">
+            <div class="form-group__head mt-8" id="TotalAmount">
+              <h3>Daily cost for 90 days</h3>
+              <p><span>&#8358;</span> 100,000</p>
+            </div>
+          </section>
+          
+        </div>
+      </section>  
     </section>
   </section>
 
-  <section class="key-indecator__section">
-    <section class="wrapper">
-      <h1>Key Indicator for Growth</h1>
-      <section class="grid gap-20 grid-cols-3 key-indecator">
-        <div class="text-center">
-          <h3>1472</h3>
-          <p>Unique  SMEs</p>
+  <section class="about__section">
+    <h1>Things to know about our costs</h1>
+    <section class="about">
+
+      <section class="owl-carousel" id="slider">
+
+        <!-- Card 1 -->
+        <div class="rounded overflow-hidden bg-gray-50	py-7 content">
+          <img src="./assets/image/icon2.png" alt="" class="mx-auto">
+          <div class="px-6 py-4">
+            <div class="font-bold text-center mb-2">Fast online isntant approvals</div>
+            <p class="text-gray-700 text-base text-center">
+              We provide online instant cash loans with quick approval that suit you
+            </p>
+          </div>
         </div>
-        <div class="text-center">
-          <h3>5074</h3>
-          <p>Loans Disbursement</p>
+
+        <!-- Card 2 -->
+        <div class="rounded overflow-hidden bg-white py-7 content">
+          <img src="./assets/image/icon1.png" alt="" class="mx-auto">
+          <div class="px-6 py-4">
+            <h3 class="mb-2 font-bold text-center">Flexible with your repayments</h3>
+            <p class="text-gray-700 text-base text-center">
+              Reshedule paymentup to five days for free and within your loan terms, we just need 24 hours notice
+            </p>
+          </div>
         </div>
-        <div class="text-center">
-          <h3>23</h3>
-          <p>Partnership Transactions</p>
+
+        <!-- Card 3 -->
+        <div class="rounded overflow-hidden bg-gray-50	 py-7 content">
+          <img src="./assets/image/icon2.png" class="mx-auto">
+          <div class="px-6 py-4">
+            <h3 class="font-bold text-center mb-2">No early payment fees for your loan</h3>
+            <p class="text-gray-700 text-base text-center">
+              so you can pay your loan off sonner and you'll save on interst
+            </p>
+          </div>
+        </div>
+      
+        <!--Card 4-->
+        <div class="rounded overflow-hidden bg-white py-7 content">
+          <img src="./assets/image/icon3.png" alt="" class="mx-auto">
+          <div class="px-6 py-4">
+            <div class="font-bold text-center mb-2">Flexible with your repayments</div>
+            <p class="text-gray-700 text-base text-center">
+              Reshedule paymentup to five days for free and within your loan terms, we just need 24 hours notice
+            </p>
+          </div>
+        </div>
+      
+        <!--Card 5-->
+        <div class="rounded overflow-hidden bg-gray-50	 py-8 content">
+          <img src="./assets/image/icon1.png" alt="" class="mx-auto">
+          <div class="px-6 py-4">
+            <div class="font-bold text-center mb-2">Good credit history is rewarded</div>
+            <p class="text-gray-700 text-base text-center">
+              Loans are cheaper when you have a good credit profile and you have built your history with us
+            </p>
+          </div>
         </div>
       </section>
+
     </section>
   </section>
 
-  <section class="testimonial__section">
-    <h1>Client Testimonials</h1>
-    <section class="wrapper">
-      <div class="indicator">
-        <span class="btn active"></span>
-        <span class="btn"></span>
-        <span class="btn"></span>
-        <span class="btn"></span>
-      </div>
-      <section class="testimonial">
-        <section class="slide-row" id="slide">
-          <section class="slide-col">
-            
-            <div class="user__text">
-              <p>"Bitcoin is better than currency in that you don’t have to be physically in the same place and, of course, for large transactions.”</p>
-              <h3>Aaron Ballance</h3>
-              <p>Zara Inc.</p>
-            </div>
-            <div class="user__img">
-              <img src="./assets/image/one.jpg" alt="" width="450px" height="150px">
-            </div>
-          </section>
-          
-          <section class="slide-col">
-            <div class="user__text">
-              <p>"Bitcoin is better than currency in that you don’t have to be physically in the same place and, of course, for large transactions.”</p>
-              <h3>Tems jokati</h3>
-              <p>Eyenior Inc.</p>
-            </div>
-            <div class="user__img">
-              <img src="./assets/image/two.jpg" alt="" width="450px" height="150px">
-            </div>
-          </section>
-          
-          <section class="slide-col">
-            <div class="user__text">
-              <p>"Bitcoin is better than currency in that you don’t have to be physically in the same place and, of course, for large transactions.”</p>
-              <h3>Brad Tanks</h3>
-              <p>B & T ltd</p>
-            </div>
-            <div class="user__img">
-              <img src="./assets/image/three.jpg" alt="" width="450px" height="150px">
-            </div>
-          </section>
+  <section class="fourth__section">
+    <div class="fourth__section-inner">
+      <img src="/assets/image/team.jpg" alt="">
+      <section class="wrapper">
+        <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-5">
+          <div class="fourth__section-head">
+            <p>Checking your rates won’t affect your credit score</p>
+            <h1>We've built a secure & personalized experience</h1>
+          </div>
   
-          <section class="slide-col">
-            <div class="user__text">
-              <p>"Bitcoin is better than currency in that you don’t have to be physically in the same place and, of course, for large transactions.”</p>
-              <h3>Nike Oye</h3>
-              <p>Oye Inc.</p>
+          <div class="fourth__section-body">
+            <div class="bg-gray-700 p-6 rounded-lg flex items-center">
+              <i class="fas fa-check-circle mr-4"></i>
+              <p class="text-gray-700">Checking your rates won’t affect your credit score</p>
             </div>
-            <div class="user__img">
-              <img src="./assets/image/four.jpg" alt="" width="450px" height="150px">
+  
+            <div class="p-6 rounded-lg flex items-center">
+              <i class="fas fa-check-circle mr-4 "></i>
+              <p class="text-gray-700">Our rates are often lower than the banks</p>
             </div>
-          </section>
+  
+            <div class="bg-gray-700 p-6 rounded-lg flex items-center">
+              <i class="fas fa-check-circle mr-4"></i>
+              <p class="text-gray-700">We have simple online application</p>
+            </div>
+  
+            <div class=" p-6 rounded-lg flex items-center">
+              <i class="fas fa-check-circle mr-4"></i>
+              <p class="text-gray-700">No early repayment fees, no hidden charges</p>
+            </div>
+          </div>
         </section>
       </section>
-    </section>
+    </div>
+    
+  </section>
+
+  <section class="fifth__section">
+    <div class="wrapper">
+
+    </div>
   </section>
 
   <footer>
     <div class="container">
-      <section class="footer__top flex justify-between pb-14">
-        <div class="left flex justify-between">
+      <section class="footer__top grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2  justify-between pb-14">
+        <div class="left sm:flex justify-between">
           <section class="mobile-navigations__address">
             <h1 class="">Address</h1>
             <p>
@@ -351,15 +421,16 @@
             </section>
           </section>  
         </div>
-        <div class="right">
+        <div class="right mt-10 md:mt-0 md:ml-auto">
+
           <p>
             Drops us a line or two, we are open for creative minds and collaboration
           </p>
           <a href="#"> support@valuedriver.co </a>
         </div>
       </section>
-      <section class="footer__bottom flex justify-between items-center">
-        <div class="flex">
+      <section class="footer__bottom grid-cols-1  md:flex justify-between items-center ">
+        <div class="flex ic">
           <div class="social-icon flex">
             <a  href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
             <a  href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
@@ -379,5 +450,29 @@
   </footer>
   <!-- main js -->
   <script src="/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+
+  <script>
+    $('#slider').owlCarousel({
+      loop: true,
+      margin: 15,
+      nav: false,
+      autoplay: true,
+      responsiveClass:true,
+      responsive:{
+        0:{
+          items:1,
+        },
+        600:{
+          items:2,
+        },
+        1000:{
+          items:3,
+        }
+      }
+    })
+  </script>
 </body>
 </html>
