@@ -159,7 +159,7 @@
   </section>
   
   <main class="hero">
-    <section class="wrapper mx-auto md:grid gap-2 grid-cols-2">
+    <section class="wrapper mx-auto lg:grid gap-2 grid-cols-2">
       <section class="hero__info">
         <h1>
           Easily access
@@ -176,17 +176,58 @@
         </div>
         
       </section>
-      <section>
-        <section class="hero__img">
-          <img src="assets/image/heroimage.PNG" alt="">
-        </section>
-      </section>
+      <section class="Apply__loan-cal">
+        <div class="loan-cal">
+          <h1 class="loan__cal-head my-5 text-center">Calculate Tour Rate</h1>
+          <section class="form">
+            <div class="form-group__head">
+              <h3>Borrowed Amount</h3>
+              <p id="sliderValue"><span>&#8358;</span> 100,000</p>
+            </div>
+            <div class="range-slider flex">
+              <input type="range" value="100" min="100" max="999" range="true"
+                step="1" id="firstRange">
+                <div class="sliderValue amount__range">
+                  <span>100</span>
+                </div>
+            </div>
+          </section>
+          
+          <section class="form">
+            <div class="form-group__head mt-8">
+              <h3>Repayment Period</h3>
+              <p id="sliderValueN">2 days</p>
+            </div>
+            <div class="range-slider flex">
+              <input type="range" value="1" min="2" max="90" range="true"
+                step="1" id="secondRange">
+              <div class="sliderValue days__range">
+                <span>2</span>
+              </div>  
+            </div>
+          </section>
+          <section class="form">
+            <div class="form-group__head mt-8" id="TotalAmount">
+              <h3>Daily cost for 90 days</h3>
+              <p><span>&#8358;</span> 100,000</p>
+            </div>
+          </section>
+          
+        </div>
+      </section> 
+      
     </section>
   </main>
 
   <!-- APPLY FOR A LOAN -->
   <section class="Apply__section">
     <section class="wrapper container mx-auto px-10 sm:px-10 lg:grid gap-20 grid-cols-2">
+      <section>
+        <section class="hero__img">
+          <img src="assets/image/heroimage.PNG" alt="">
+        </section>
+      </section>
+
       <section class="Apply__section-info">
         <h1>3 Quick Steps Apply &amp; Access Loan</h1>
         <section class="info">
@@ -231,45 +272,7 @@
           Get Started Now
         </a>
       </section>
-      <section class="Apply__loan-cal">
-        <div class="loan-cal">
-          <h1 class="loan__cal-head my-5 text-center">Calculate Tour Rate</h1>
-          <section class="form">
-            <div class="form-group__head">
-              <h3>Borrowed Amount</h3>
-              <p id="sliderValue"><span>&#8358;</span> 100,000</p>
-            </div>
-            <div class="range-slider flex">
-              <input type="range" value="100" min="100" max="999" range="true"
-                step="1" id="firstRange">
-                <div class="sliderValue amount__range">
-                  <span>100</span>
-                </div>
-            </div>
-          </section>
-          
-          <section class="form">
-            <div class="form-group__head mt-8">
-              <h3>Repayment Period</h3>
-              <p id="sliderValueN">2 days</p>
-            </div>
-            <div class="range-slider flex">
-              <input type="range" value="1" min="2" max="90" range="true"
-                step="1" id="secondRange">
-              <div class="sliderValue days__range">
-                <span>2</span>
-              </div>  
-            </div>
-          </section>
-          <section class="form">
-            <div class="form-group__head mt-8" id="TotalAmount">
-              <h3>Daily cost for 90 days</h3>
-              <p><span>&#8358;</span> 100,000</p>
-            </div>
-          </section>
-          
-        </div>
-      </section>  
+     
     </section>
   </section>
 

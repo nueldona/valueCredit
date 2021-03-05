@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   height: 100%;
-  padding-bottom: 6rem;
+  padding: 3rem 0rem 6rem 0rem;
   .wrapper {
     width: 85%;
     height: 100%;
@@ -10,7 +10,8 @@
       display: flex;
       flex-direction: column;
       text-align: left;
-      padding-top: 4em;
+      // padding-top: 4em;
+      margin: auto 0;
       h1 {
         @include x-lg__text
       }
@@ -23,12 +24,77 @@
       }
     }
 
-    .hero__img {
+    .Apply__loan-cal {
       width: 100%;
       height: 100%;
-      img {
-        border-radius: 10px;
-        margin: 0 0 0 auto;
+      // padding: 2rem 0rem;
+
+      .loan-cal {
+        width: 100%;
+        height: 100%;
+        background-color: #ffff; 
+        padding: 3% 7% 8% 7%;  
+        box-shadow: 0px 1px 12px 0px rgba(167, 167, 167, 0.71);
+        border-radius: 5px;
+        z-index: 5;
+        left: 0;
+        margin: 5rem 0rem;
+
+        .loan__cal-head {
+          padding: 0.5rem 0rem;
+          @include lg__text;
+          font-weight: 700;
+        }
+
+        .form-group__head {
+          margin-bottom: 0rem;
+          h3 {
+            @include md__text;
+            font-weight: 500;
+          }
+          p {
+            @include lg__text;
+            font-size: 25px;
+            font-weight: 700;
+          }
+        }
+        .range-slider {
+          height: 60px;
+          max-width: 100%;
+          border-radius: 10px;
+          padding: 10px 4px 0 4px;
+          align-items: center;
+          justify-content: center;
+
+          .sliderValue {
+            width: 20px; 
+            height: 20px;
+            margin-left: 1rem;
+            line-height: 30px;
+          } 
+
+          input {
+            -webkit-appearance: none;
+            height: 4px;
+            width: 100%;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            // overflow: hidden;
+
+            &::-webkit-slider-thumb{
+              -webkit-appearance: none;
+              height: 25px;
+              width: 25px;
+              background: #5f5ff5;
+              border-radius: 50%;
+              border: 2px solid #fff;
+              cursor: pointer;
+            }
+
+          }
+        }
       }
     }
   }
@@ -37,37 +103,32 @@
 
 @media screen and (min-width: 500px)  {
   .loan-cal {
-    width: 380px !important;
-    margin : 5rem auto 5rem auto !important;
+    width: 400px !important;
+    height: 580px !important;
+    margin : 5rem auto !important;
   }
 }
 
-@include mediaXm {
-  .loan__cal {
-    width: 300px !important;
-  } 
-}
-
-@include mediaSd {
-  .hero {
-    .hero__img {
-      margin-top: 4rem;
-      clear: both;
-      img {
-        margin: 0 auto !important;
-      }
-    }
+@media screen and (min-width: 1024px ) {
+  .loan-cal {
+    margin : 0rem  0rem 0rem auto !important;
   }
 }
 
 @include mediaMd {
   .hero__info {
-    padding-top: 4em;
+    margin: auto 0;
   }
 }
 
-@include mediaXl {
-  .hero__info {
-    padding: 6rem 0rem 0rem 0rem !important;
+@include mediaSd {
+  .hero {
+    padding: 4rem 0rem 4rem 0rem !important;
+    .hero__info {
+      h1 {
+        @include x-lg__text;
+        font-size: 45px !important;
+      }
+    }
   }
 }
